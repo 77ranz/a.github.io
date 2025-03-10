@@ -5,7 +5,112 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>✔AFFORDABLE WEBSITE CREATION SERVICES✔PLEASE..😊🙏</title>
     <script src="https://cdn.tailwindcss.com"></script>
+<link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+<!-- Footer Statis -->
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .content {
+            flex: 1; /* Membuat konten mengambil ruang yang tersedia */
+            padding: 20px;
+        }
+
+        footer1 {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+
+
+<!--Panah Bergerak Naik Turun-->
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: white;
+        }
+        .container3 {
+            position: relative;
+            text-align: center;
+            font-size: 50px;
+            animation: moveUpDown 1s infinite alternate;
+        }
+        @keyframes moveUpDown {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(20px); }
+        }
+    </style>
+<!--Animasi Teks Menggulung-->
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #282c34;
+            color: white;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .container2 {
+            position: relative;
+            font-size: 3rem;
+            white-space: nowrap;
+            opacity: 1;
+            transform: translateY(100%);
+            animation: rollIn 5s infinite linear;
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+
+        @keyframes rollIn {
+            0% {
+                transform: translateY(100%);
+            }
+            50% {
+                transform: rotateY(90deg) translateY(0);
+            }
+            100% {
+                transform: rotateY(0) translateY(-100%);
+            }
+        }
+
+        .container2::after {
+            content: " Hello, Welcome to My Website!";
+            display: block;
+            opacity: 1;
+            animation: fadeIn 1s infinite alternate;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
 
 <!--Animasi Teks-->
     <style>
@@ -14,7 +119,7 @@
             display: flex;   
             justify-content: center;
             align-items: center;
-            height: 300vh;   <!--=panjang scrol vertical-->
+            height: 400vh;   <!--=panjang scrol vertical-->
             margin: 0;
             background-color: #282c34;
             font-family: Arial, sans-serif;
@@ -169,6 +274,13 @@
 <body class="bg-gray-100 flex flex-col items-center justify-center min-h-screen py-10">
 
 
+<!-- Footer Statis -->
+<footer1>
+    <p>&copy; 2023 Nama Perusahaan. Semua Hak Dilindungi.</p>
+</footer1>
+
+
+
 <!--Chatbot Modern -->
     <button id="chatbot-btn">Chat</button>
     <div id="chat-container">
@@ -276,6 +388,14 @@
 
 <div class="flex flex-col gap-6 w-full max-w-4xl px-4">         
 
+
+<!--Animasi Teks Menggulung-->
+        <div class="">
+<div class="rounded-2xl shadow-lg p-6 h-40" style="background-color: clear;">
+    <div class="container2"></div>
+        </div>
+
+
 <!-- HEADER -->
 <header class="bg-white dark:bg-gray-800 shadow-md">
         <div class="container mx-auto px-6 py-4 flex justify-between items-center">
@@ -319,46 +439,40 @@ Bunda Ayah Abang Kakak.Terimakasih 😉🙏</p>
             <!-- Produk akan dimasukkan dengan JavaScript -->
         </div>
        </div>
+
+<!--Panah Bergerak Naik Turun-->
+        <div class="bg-white rounded-2xl shadow-lg p-6">
+    <div class="container3" id="arrow">⬇⬇⬇</div>
+ <h2 class="text-2xl font-bold text-center text-gray-700">DISCOUNT 75%</h2>
+            <p class="text-gray-500 text-center mt-2">Selama Bulan Suci Ramadhan</p>
+            <button class="mt-4 w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 rounded-lg transition duration-300">
+                Klik
+            </button>
+    <script>
+        setInterval(() => {
+            document.getElementById('arrow').style.color = '#' + Math.floor(Math.random()*16777215).toString(16);
+        }, 1000);
+    </script>
+        </div>
+
 <!-- Card 3 -->
         <div class="bg-white rounded-2xl shadow-lg p-6">
-            <h2 class="text-2xl font-bold text-center text-gray-700">body1</h2>
-            <p class="text-gray-500 text-center mt-2">Ini adalah contoh elemen HTML modern dan responsif.</p>
-            <button class="mt-4 w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 rounded-lg transition duration-300">
-                Klik Saya
-            </button>
+            
         </div>
 <!-- Card 3 -->
         <div class="bg-white rounded-2xl shadow-lg p-6">
-            <h2 class="text-2xl font-bold text-center text-gray-700">body2</h2>
-            <p class="text-gray-500 text-center mt-2">Ini adalah contoh elemen HTML modern dan responsif.</p>
-            <button class="mt-4 w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 rounded-lg transition duration-300">
-                Klik Saya
-            </button>
-        </div>
-<!-- Card 3 -->
-        <div class="bg-white rounded-2xl shadow-lg p-6">
-            <h2 class="text-2xl font-bold text-center text-gray-700">body3</h2>
-            <p class="text-gray-500 text-center mt-2">Ini adalah contoh elemen HTML modern dan responsif.</p>
-            <button class="mt-4 w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 rounded-lg transition duration-300">
-                Klik Saya
-            </button>
+            
         </div>
  <!-- Card 3 -->
         <div class="bg-white rounded-2xl shadow-lg p-6">
             <h2 class="text-2xl font-bold text-center text-gray-700">body4</h2>
-            <p class="text-gray-500 text-center mt-2">Ini adalah contoh elemen HTML modern dan responsif.</p>
+            <p class="text-gray-500 text-center mt-2">DISCOUNT 75%</p>
             <button class="mt-4 w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 rounded-lg transition duration-300">
-                Klik Saya
+                Klik
             </button>
-        </div>       
-<!-- Card 3 -->
-        <div class="bg-white rounded-2xl shadow-lg p-6">
-            <h2 class="text-2xl font-bold text-center text-gray-700">body3</h2>
-            <p class="text-gray-500 text-center mt-2">Ini adalah contoh elemen HTML modern dan responsif.</p>
-            <button class="mt-4 w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 rounded-lg transition duration-300">
-                Klik Saya
-            </button>
-        </div>
+        </div>    
+   
+
 <!--Animasi Teks-->
         <div class="bg-white rounded-2xl shadow-lg p-6">
     <div class="container1">
