@@ -2,166 +2,247 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Responsive Card</title>
+    <meta name="viewport" content="width=device-width, initial-scale=0.4">
+    <title>✔AFFORDABLE WEBSITE CREATION SERVICES✔PLEASE..😊🙏</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+<!!-- FOOTER -->
     <style>
         :root {
-            --card-width-default: 100%;
-            --card-height-default: auto;
+            --primary-color: #007bff;
+            --bg-color: #f8f9fa;
+            --text-color: #212529;
         }
-
-        * {
+        body {
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
+            background: var(--bg-color);
+            color: var(--text-color);
+            transition: background 0.3s, color 0.3s;
         }
-
-        body {
-            background: linear-gradient(135deg, #f0f2f5, #d9e2ec);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            padding: 20px;
-        }
-
-        .card-container {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            gap: 20px;
-            width: 100%;
-            overflow-x: auto;
-            padding: 10px;
-            overflow: hidden;
-            white-space: nowrap;
-        }
-
-        .card {
-            width: var(--card-width-default);
-            height: var(--card-height-default);
-            border-radius: 12px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            padding-bottom: 15px;
-            flex-shrink: 0;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-        }
-
-        .card img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 12px 12px 0 0;
-        }
-
-        .card-content {
-            padding: 15px;
+        footer {
+            background: var(--primary-color);
+            color: white;
+            padding: 20px 0;
             text-align: center;
         }
-
-        .card-title {
-            font-size: 20px;
-            font-weight: bold;
-            margin-bottom: 10px;
+        .footer-container {
+            max-width: 1100px;
+            margin: auto;
+            padding: 20px;
         }
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        .social-icons a {
+            margin: 0 10px;
+            color: white;
+            font-size: 20px;
+        }
+        .subscribe-container {
+            margin-top: 15px;
+        }
+        .subscribe-container input {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            width: 250px;
+        }
+        .subscribe-container button {
+            padding: 10px 15px;
+            border: none;
+            background: #0056b3;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
 
-        .card-text {
-            font-size: 14px;
-            color: #555;
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+        }
+        .container {
+            width: 90%;
+            max-width: 400px;
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            transition: all 0.3s ease-in-out;
+            margin: 10px;
+        }
+        .container:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+        h1 {
+            color: white;
             margin-bottom: 15px;
         }
-
-        .card-button {
+        p {
+            color: #f1f1f1;
+        }
+        .btn {
             display: inline-block;
-            background: #007bff;
-            color: #fff;
+            padding: 10px 20px;
+            margin-top: 15px;
+            background: #ff7eb3;
+            color: white;
             text-decoration: none;
-            padding: 10px 15px;
-            border-radius: 8px;
-            transition: background 0.3s;
+            border-radius: 5px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s, transform 0.2s;
         }
-
-        .card-button:hover {
-            background: #0056b3;
+        .btn:hover {
+            background: #ff5370;
+            transform: translateY(-3px);
         }
-
-        .card:nth-child(1) {
-            background: pink;
-            --card-width-default: 20%;
-            --card-height-default: 100px;
-        }
-
-        .card:nth-child(2) {
-            background: yellow;
-            --card-width-default: 50%;
-            --card-height-default: 100px;
-        }
-        .card:nth-child(3) {
-            background: pink;
-            --card-width-default: 20%;
-            --card-height-default: 100px;
-        }
-        .card:nth-child(4) {
-            background: pink;
-            --card-width-default: 20%;
-            --card-height-default: 100px;
-        }
-        .card:nth-child(5) {
-            background: green;
-            --card-width-default: 70%;
-            --card-height-default: 100px;
-        }
+        .container:nth-child(1) { 
+         background: blue url('=8.jpg') no-repeat center/cover; 
+         background-blend-mode: multiply;
+         }
+        .container:nth-child(2) { 
+         background:  url('=8.jpg') no-repeat center/cover; 
+         background-blend-mode: multiply;
+         }
+        .container:nth-child(3) { 
+         background: green url('=8.jpg') no-repeat center/cover; 
+         background-blend-mode: multiply;
+         }
+        .container:nth-child(4) { 
+         background: yellow url('=8.jpg') no-repeat center/cover; 
+         background-blend-mode: multiply;
+         }
+        .container:nth-child(5) { 
+         background: cyan url('=8.jpg') no-repeat center/cover; 
+         background-blend-mode: multiply;
+         }
+        .container:nth-child(6) { 
+         background: magenta url('=8.jpg') no-repeat center/cover; 
+         background-blend-mode: multiply;
+         }
+        .container:nth-child(7) { 
+         background: white url('=8.jpg') no-repeat center/cover; 
+         background-blend-mode: multiply;
+         }
+        .container:nth-child(8) { 
+         background: orange url('=8.jpg') no-repeat center/cover; 
+         background-blend-mode: multiply;
+         }
+        .container:nth-child(9) { 
+         background: clear url('=8.jpg') no-repeat center/cover; 
+         background-blend-mode: multiply;
+         }
+        .container:nth-child(10) { 
+         background: green url('=8.jpg') no-repeat center/cover; 
+         background-blend-mode: multiply;
+         }
     </style>
 </head>
 <body>
-    <div class="card-container">
-        <div class="card">
-            <img src="" alt="Gambar">
-            <div class="card-content">
-                <h3 class="card-title">1</h3>
-                <p class="card-text">Ini adalah deskripsi singkat tentang isi card ini.</p>
-                <a href="#" class="card-button">Baca Selengkapnya</a>
-            </div>
-        </div>
-        <div class="card">
-            <img src="" alt="Gambar">
-            <div class="card-content">
-                <h3 class="card-title">2</h3>
-                <p class="card-text">Ini adalah deskripsi singkat tentang isi card ini.</p>
-                <a href="#" class="card-button">Baca Selengkapnya</a>
-            </div>
-        </div>
-        <div class="card">
-            <img src="" alt="Gambar">
-            <div class="card-content">
-                <h3 class="card-title">3</h3>
-                <p class="card-text">Ini adalah deskripsi singkat tentang isi card ini.</p>
-                <a href="#" class="card-button">Baca Selengkapnya</a>
-            </div>
-        </div>
-        <div class="card">
-            <img src="" alt="Gambar">
-            <div class="card-content">
-                <h3 class="card-title">4</h3>
-                <p class="card-text">Ini adalah deskripsi singkat tentang isi card ini.</p>
-                <a href="#" class="card-button">Baca Selengkapnya</a>
-            </div>
-        </div>
-        <div class="card">
-            <img src="" alt="Gambar">
-            <div class="card-content">
-                <h3 class="card-title">5</h3>
-                <p class="card-text">Ini adalah deskripsi singkat tentang isi card ini.</p>
-                <a href="#" class="card-button">Baca Selengkapnya</a>
-            </div>
+ <!-- ELEMEN 1 -->
+    <div class="container" style="width: 500px; height: 200px; background-color: ;">
+    <h1>Elemen 1</h1>
+    <p>Deskripsi elemen 1.</p>
+    <a href="#" class="btn">Tombol 1</a>
+    </div>
+
+<!-- ELEMEN 2 header -->
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center bg-white dark:bg-gray-800 shadow-md" style="width: 500px; height: 200px; background-color: ;" 
+    script="const menuBtn = document.getElementById('menu-btn'); const menu = document.getElementById('menu'); 
+    menuBtn.addEventListener('click', () => {menu.classList.toggle('hidden');});">
+            <div class="flex items-center space-x-4">
+                <a href="#">
+                    <img src="d.jpg" alt="Logo" class="h-10"> 
+                </a>
+                <span class="text-gray-700 dark:text-gray-300">Slogan atau Deskripsi</span>
+            
+            
+            <button id="menu-btn" class="md:hidden text-gray-900 dark:text-white">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+            
+            <nav id="menu" class="hidden md:flex space-x-6">
+                <a href="#" class="text-gray-900 dark:text-white hover:text-blue-500">Home</a>
+                <a href="#" class="text-gray-900 dark:text-white hover:text-blue-500">About</a>
+                <a href="#" class="text-gray-900 dark:text-white hover:text-blue-500">Services</a>
+                <a href="#" class="text-gray-900 dark:text-white hover:text-blue-500">Contact</a>
+            </nav>
         </div>
     </div>
+    
+
+<!-- ELEMEN 3 -->
+    <div class="container" style="width: 500px; height: 200px; background-color: ;">
+    </div>
+<!-- ELEMEN 4-->
+    <div class="container" style="width: 500px; height: 200px; background-color: ;">
+    </div>
+<!-- ELEMEN 5-->
+    <div class="container" style="width: 500px; height: 200px; background-color: ;">
+    </div>
+<!-- ELEMEN 6-->
+    <div class="container" style="width: 500px; height: 200px; background-color: ;">
+    </div>
+<!-- ELEMEN 7-->
+    <div class="container" style="width: 500px; height: 200px; background-color: ;">
+    </div>
+<!-- ELEMEN 8-->
+     <div class="container" style="width: 500px; height: 200px; background-color: ;">
+    </div>
+<!-- ELEMEN 9-->
+    <div class="container" style="width: 500px; height: 200px; background-color: ;">
+    </div>
+<!-- ELEMEN 10 FOOTER -->
+     <div class="container footer-container" style="width: 500px; height: 200px; background-color: ;">
+            <div class="footer-links">
+                <a href="#">Home</a>
+                <a href="#">Tentang</a>
+                <a href="#">Layanan</a>
+                <a href="#">Kontak</a>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+                <a href="#"><i class="fab fa-bitcoin"></i></a>
+                <a href="#"><i class="fas fa-university"></i></a>
+            </div>
+            <div class="subscribe-container">
+                <input type="email" id="email" placeholder="Masukkan email Anda">
+                <button onclick="subscribe()">Berlangganan</button>
+            </div>
+            <p>&copy; 2025 Perusahaan Anda. Semua Hak Dilindungi.</p>
+    </div>
+
+<!-- FOOTER -->
+    <script>
+        function subscribe() {
+            let email = document.getElementById('email').value;
+            if(email === '' || !email.includes('@')) {
+                alert('Masukkan email yang valid!');
+            } else {
+                alert('Terima kasih telah berlangganan!');
+            }
+        }
+    </script>
 </body>
 </html>
