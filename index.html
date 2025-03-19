@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -11,6 +12,54 @@
     <script defer src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
     <link rel="stylesheet" href="style.css">
     
+<!-- Gambar Vertikal -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 100px;
+            display: flex;
+            flex-direction: column;
+            gap: 0px;
+            padding: 0px;
+        }
+
+            <!-- height: 900px; -->
+        .image-box {
+            width: 100%;
+            background-color: #ddd;
+            border-radius: 1px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .image-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .image-box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+
 <!--Animasi Teks Menggulung-->
     <style>
         body {
@@ -117,8 +166,6 @@
         }
     </style>
 
-
-    
 <!-- Testimoni Pelanggan -->
  <style>
         #testimoni {
@@ -244,7 +291,8 @@
             cursor: pointer;
         }
     </style>
-<!-- html''linear-gradient(135deg, #667eea, #764ba2) -->
+
+<!-- HALAMAN html''linear-gradient(135deg, #667eea, #764ba2)-height: 5000vh;= TINGGI HALAMN -->
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -254,12 +302,12 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 200vh;
+            height: 1700vh;
             background: ; pink
         }
         .container {
             width: 90%;
-            max-width: 400px;
+            max-width: 200px;
             backdrop-filter: blur(10px);
             padding: 20px;
             border-radius: 15px;
@@ -370,9 +418,20 @@ style="width: 500px; height: 200px; background-color: ;"
     </div>
     
 
-<!-- ELEMEN 3 -->
-    <div class="container" style="width: 500px; height: 200px; background-color: ;">
+<!-- ELEMEN 3 Gambar Vertikal -->
+    <div class="container" style="width: 500px; height: 8000px; background-color: ;">
+        <div class="image-box"><img src="11.jpg" alt="Image 1"></div>
+        <div class="image-box"><img src="12.jpg" alt="Image 2"></div>
+        <div class="image-box"><img src="13.jpg" alt="Image 3"></div>
+        <div class="image-box"><img src="14.jpg" alt="Image 4"></div>
+        <div class="image-box"><img src="15.jpg" alt="Image 5"></div>
+        <div class="image-box"><img src="16.jpg" alt="Image 6"></div>
+        <div class="image-box"><img src="17.jpg" alt="Image 7"></div>
+        <div class="image-box"><img src="18.jpg" alt="Image 8"></div>
+        <div class="image-box"><img src="19.jpg" alt="Image 9"></div>
+        <div class="image-box"><img src="20.jpg" alt="Image 10"></div>
     </div>
+
 <!-- ELEMEN 4-->
     <div class="container" style="width: 500px; height: 200px; background-color: ;">
     </div>
