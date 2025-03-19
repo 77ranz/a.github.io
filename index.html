@@ -11,6 +11,99 @@
     <script defer src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
     <script defer src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
     <link rel="stylesheet" href="style.css">
+
+<!-- HALAMAN html''linear-gradient(135deg, #667eea, #764ba2)-height: 5000vh;= TINGGI HALAMN -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 500vh;
+            background: ; pink
+        }
+        .container {
+            width: 90%;
+            max-width: 3000px;
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            transition: all 0.3s ease-in-out;
+            margin: 10px;
+        }
+        .container:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+        h1 {
+            color: white;
+            margin-bottom: 15px;
+        }
+        p {
+            color: #f1f1f1;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 15px;
+            background: #ff7eb3;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+            transition: background 0.3s, transform 0.2s;
+        }
+        .btn:hover {
+            background: #ff5370;
+            transform: translateY(-3px);
+        }
+        .container:nth-child(1) { 
+         background: clear url('=8.jpg') no-repeat center/cover; 
+         background-blend-mode: multiply;
+         }
+        .container:nth-child(2) { 
+         background:  url('8.jpg') no-repeat center/cover; 
+         background-blend-mode: multiply;
+         }
+        .container:nth-child(3) { 
+         background: green url('=8.jpg') no-repeat center/cover; 
+         background-blend-mode: multiply;
+         }
+        .container:nth-child(4) { 
+         background: yellow url('=8.jpg') no-repeat center/cover; 
+         background-blend-mode: multiply;
+         }
+        .container:nth-child(5) { 
+         background: cyan url('=8.jpg') no-repeat center/cover; 
+         background-blend-mode: multiply;
+         }
+        .container:nth-child(6) { 
+         background: magenta url('=8.jpg') no-repeat center/cover; 
+         background-blend-mode: multiply;
+         }
+        .container:nth-child(7) { 
+         background: red url('=8.jpg') no-repeat center/cover; 
+         background-blend-mode: multiply;
+         }
+        .container:nth-child(8) { 
+         background: clear url('=8.jpg') no-repeat center/cover; 
+         background-blend-mode: multiply;
+         }
+        .container:nth-child(9) { 
+         background: clear url('=8.jpg') no-repeat center/cover; 
+         background-blend-mode: multiply;
+         }
+        .container:nth-child(10) { 
+         background: green url('=8.jpg') no-repeat center/cover; 
+         background-blend-mode: multiply;
+         }
+    </style>
+
     
 <!-- Gambar Vertikal -->
     <style>
@@ -290,98 +383,6 @@
             border-radius: 5px;
             cursor: pointer;
         }
-    </style>
-
-<!-- HALAMAN html''linear-gradient(135deg, #667eea, #764ba2)-height: 5000vh;= TINGGI HALAMN -->
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 500vh;
-            background: ; pink
-        }
-        .container {
-            width: 90%;
-            max-width: 5000px;
-            backdrop-filter: blur(10px);
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            text-align: center;
-            transition: all 0.3s ease-in-out;
-            margin: 10px;
-        }
-        .container:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-        }
-        h1 {
-            color: white;
-            margin-bottom: 15px;
-        }
-        p {
-            color: #f1f1f1;
-        }
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
-            margin-top: 15px;
-            background: #ff7eb3;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
-            transition: background 0.3s, transform 0.2s;
-        }
-        .btn:hover {
-            background: #ff5370;
-            transform: translateY(-3px);
-        }
-        .container:nth-child(1) { 
-         background: clear url('=8.jpg') no-repeat center/cover; 
-         background-blend-mode: multiply;
-         }
-        .container:nth-child(2) { 
-         background:  url('8.jpg') no-repeat center/cover; 
-         background-blend-mode: multiply;
-         }
-        .container:nth-child(3) { 
-         background: green url('=8.jpg') no-repeat center/cover; 
-         background-blend-mode: multiply;
-         }
-        .container:nth-child(4) { 
-         background: yellow url('=8.jpg') no-repeat center/cover; 
-         background-blend-mode: multiply;
-         }
-        .container:nth-child(5) { 
-         background: cyan url('=8.jpg') no-repeat center/cover; 
-         background-blend-mode: multiply;
-         }
-        .container:nth-child(6) { 
-         background: magenta url('=8.jpg') no-repeat center/cover; 
-         background-blend-mode: multiply;
-         }
-        .container:nth-child(7) { 
-         background: red url('=8.jpg') no-repeat center/cover; 
-         background-blend-mode: multiply;
-         }
-        .container:nth-child(8) { 
-         background: clear url('=8.jpg') no-repeat center/cover; 
-         background-blend-mode: multiply;
-         }
-        .container:nth-child(9) { 
-         background: clear url('=8.jpg') no-repeat center/cover; 
-         background-blend-mode: multiply;
-         }
-        .container:nth-child(10) { 
-         background: green url('=8.jpg') no-repeat center/cover; 
-         background-blend-mode: multiply;
-         }
     </style>
 </head>
 <body>
