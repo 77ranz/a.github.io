@@ -140,6 +140,80 @@
          }
     </style>
 
+<!-- TEXT ROTASI -->
+ <style> 
+    .container3 {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+    .text {
+        width: 500px;
+        height: 500px;
+        background: url('https://via.placeholder.com/200') no-repeat center/cover;
+        transform-style: preserve-3d;
+        animation: rotateAnimation 30s linear infinite;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px; /* Ukuran font default */
+        font-weight: bold;
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    @keyframes rotateAnimation {
+        0% {
+            transform: rotateY(0deg);
+        }
+        100% {
+            transform: rotateY(360deg);
+        }
+    }
+</style>
+
+
+<!-- IMG ROTASI -->
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: ;
+            justify-content: center;
+            height: 100vh;
+            perspective: 1000px;
+        }
+        .image-wrapper {
+            position: relative;
+            width: 500px;
+            height: 500px;
+            transform-style: preserve-3d;
+            animation: rotateAnimation 30s linear infinite;
+        }
+        .image {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: url('22.jpg') no-repeat center/cover;
+            backface-visibility: hidden;
+        }
+        .image.back {
+            transform: rotateY(180deg);
+        }
+        @keyframes rotateAnimation {
+            0% {
+                transform: rotateY(0deg);
+            }
+            50% {
+                transform: rotateY(180deg);
+            }
+            100% {
+                transform: rotateY(360deg);
+            }
+        }
+    </style>
+
 <!-- Gambar Vertikal -->
     <style>
         * {
@@ -369,8 +443,7 @@
 </head>
 <body>
  <!-- ELEMEN 1 Animasi Teks Menggulung -->
- <div class="container flex flex-col gap-6 w-full max-w-4xl px-4 rounded-2xl shadow-lg p-6 h-40 container2" 
-style="background-color: clear;" style="width: 500px; height: 200px; background-color: ;">
+ <div class="flex flex-col gap-6 w-full max-w-4xl px-4 rounded-2xl p-6 h-40 container2" style="background-color: clear;" style="width: 500px; height: 200px; background-color: ;">
     </div>
 
   <!-- ELEMEN 2 HEADER--> 
@@ -393,13 +466,11 @@ style="background-color: clear;" style="width: 500px; height: 200px; background-
     </header>
 </div>
 
-
-
 <!-- ELEMEN 3 Gambar Vertikal -->
-    <div class="container image-box" style="width: 500px; height: 600px; background-color: ;">
+    <div class="container image-box" style="width: 500px; height: 700px; background-color: ;">
         <img src="11.jpg" alt="Image 1">
 </div>
-<div class="container image-box" style="width: 500px; height: 600px; background-color: ;">
+<div class="container image-box" style="width: 500px; height: 500px; background-color: ;">
         <img src="12.jpg" alt="Image 2">
 </div>
     <div class="container image-box" style="width: 500px; height: 600px; background-color: ;">
@@ -408,6 +479,15 @@ style="background-color: clear;" style="width: 500px; height: 200px; background-
     <div class="container image-box" style="width: 500px; height: 600px; background-color: ;">
         <img src="14.jpg" alt="Image 4">
 </div>
+
+
+<!-- ELEMEN 4 IMG ROTASI-->
+    <div class="container image-wrapper" style="width: 500px; height: 600px; background-color: ;">
+            <div class="image front"></div>
+            <div class="image back"></div>
+        </div>
+
+
     <div class="container image-box" style="width: 500px; height: 600px; background-color: ;">
         <img src="15.jpg" alt="Image 5">
 </div>
@@ -428,12 +508,12 @@ style="background-color: clear;" style="width: 500px; height: 200px; background-
 </div>
     
 
-<!-- ELEMEN 4-->
-    <div class="container" style="width: 500px; height: 200px; background-color: ;">
-    </div>
-<!-- ELEMEN 5-->
-    <div class="container" style="width: 500px; height: 200px; background-color: ;">
-    </div>
+<!-- ELEMEN 5 TEXT ROTASI-->  
+<div class="container3" style="width: 500px; height: 200px; background-color: clear; display: flex; justify-content: center; align-items: center;">
+    <div class="text" id="text">🎉 MET ULTAH QANITA 🎉</div>
+</div>
+
+
 <!-- ELEMEN 6-->
     <div class="container" style="width: 500px; height: 200px; background-color: ;">
     </div>
@@ -450,7 +530,7 @@ style="background-color: clear;" style="width: 500px; height: 200px; background-
     </div>
         
 <!-- ELEMEN 9 Testimoni Pelanggan -->
-         <div id="testimoni" class="container" style="width: 800px; height: 400px; background-color: ;">
+         <div id="testimoni" class="container" style="width: 500px; height: 150px; background-color: ;">
         <h2>Apa Kata Pelanggan Kami?</h2>
         <div class="testimoni-wrapper" id="testimoniSlider">
             <div class="testimoni-item">
@@ -539,6 +619,16 @@ style="background-color: clear;" style="width: 500px; height: 200px; background-
     </script>
 <script>
     document.body.style.overflowX = "hidden";
+</script>
+
+<!--TEXT ROTASI-->
+<script>
+    function updateFontSize(fontSize) {
+        document.getElementById("text").style.fontSize = fontSize + "px";
+    }
+
+    // Atur ukuran font langsung dalam kode
+    updateFontSize(50); // Ganti angka ini untuk mengubah ukuran font
 </script>
 
 </body>
