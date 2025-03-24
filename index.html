@@ -111,7 +111,7 @@
          background-blend-mode: multiply;
          }
         .container:nth-child(3) { 
-         background: green url('=8.jpg') no-repeat center/cover; 
+         background: clear url('=8.jpg') no-repeat center/cover; 
          background-blend-mode: multiply;
          }
         .container:nth-child(4) { 
@@ -139,10 +139,67 @@
          background-blend-mode: multiply;
          }
         .container:nth-child(10) { 
-         background: green url('=8.jpg') no-repeat center/cover; 
+         background: clear url('=8.jpg') no-repeat center/cover; 
+         background-blend-mode: multiply;
+         }
+        .container:nth-child(11) { 
+         background: clear url('=8.jpg') no-repeat center/cover; 
+         background-blend-mode: multiply;
+         }
+        .container:nth-child(12) { 
+         background: clear url('=8.jpg') no-repeat center/cover; 
+         background-blend-mode: multiply;
+         }
+        .container:nth-child(13) { 
+         background: clear url('=8.jpg') no-repeat center/cover; 
+         background-blend-mode: multiply;
+         }
+        .container:nth-child(14) { 
+         background: clear url('=8.jpg') no-repeat center/cover; 
          background-blend-mode: multiply;
          }
     </style>
+
+<!-- Gambar Run Bolak Balik -->
+    <style>
+
+        .box {
+            font-size: 10px;
+            font-weight: bold;
+            margin: 0px 0;
+            text-align: center;
+        }
+        .marquee-container {
+            width: 80%;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 150px;
+        }
+        .marquee {
+            display: flex;
+            animation: marqueeAnimation 20s linear infinite alternate;
+        }
+        .marquee img {
+            width: auto;
+            height: 100px;
+            margin: 0 0px;
+        }
+        .marquee2 {
+            animation: marqueeAnimationReverse 10s linear infinite alternate;
+        }
+        @keyframes marqueeAnimation {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        @keyframes marqueeAnimationReverse {
+            0% { transform: translateX(-50%); }
+            100% { transform: translateX(0); }
+        }
+    </style>
+
 
 <!-- TEXT ROTASI -->
     <style> 
@@ -166,7 +223,7 @@
         }
         .text, .text-mirror {
             position: absolute;
-            background: url('https://via.placeholder.com/200') no-repeat center/cover;
+            background: url('') no-repeat center/cover;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -481,7 +538,7 @@
     
 
 <!-- ELEMEN 5 TEXT ROTASI -->
- <div class="container container3" style="width: 500px; height: 500px; background-color: ;">
+ <div class="container container3" style="width: 500px; height: 600px; background-color: ;">
         <div class="text-wrapper">
             <div class="text">🎉 SELAMAT ULANG TAHUN QANITA 🎉</div>
             <div class="text-mirror">🎉 SELAMAT ULANG TAHUN QANITA 🎉</div>
@@ -529,6 +586,58 @@
                 <span>- Mayor Teddy</span>
             </div>
         </div>
+    </div>
+
+<!-- ELEMEN 10-Gambar Run Bolak Balik -->
+    <div class="container box marquee-container" style="width: 500px; height: 200px; background-color: ;">✔ DAFTAR PRODUCT TOKO KAMI ! 👌
+        <div class="marquee">
+            <img src="11.jpg" alt="Gambar 3">
+            <img src="12.jpg" alt="Gambar 4">
+            <img src="13.jpg" alt="Gambar 1">
+            <img src="14.jpg" alt="Gambar 1">
+            <img src="15.jpg" alt="Gambar 1">
+            <img src="16.jpg" alt="Gambar 1">
+            <img src="17.jpg" alt="Gambar 1">
+            <img src="18.jpg" alt="Gambar 1">
+            <img src="19.jpg" alt="Gambar 2">
+            <img src="20.jpg" alt="Gambar 2">
+            <img src="21.jpg" alt="Gambar 2">
+            <img src="22.jpg" alt="Gambar 2">
+        </div>
+    </div>
+    
+
+<!-- ELEMEN 11-Gambar Run Bolak Balik -->
+    <div class="container box marquee-container" style="width: 500px; height: 200px; background-color: ;">✔ PHOTO ARTIST MASA DEPAN 🤫🤭😜
+        <div class="marquee marquee2">
+            <img src="-1.jpg" alt="Gambar 1">
+            <img src="-2.jpg" alt="Gambar 2">
+            <img src="-3.jpg" alt="Gambar 3">
+            <img src="-4.jpg" alt="Gambar 4">
+            <img src="-5.jpg" alt="Gambar 5">
+            <img src="-6.jpg" alt="Gambar 6">
+            <img src="-7.jpg" alt="Gambar 7">
+            <img src="-8.jpg" alt="Gambar 8">
+            <img src="-9.jpg" alt="Gambar 1">
+            <img src="-10.jpg" alt="Gambar 2">
+            <img src="-11.jpg" alt="Gambar 3">
+            <img src="-12.jpg" alt="Gambar 4">
+            <img src="-13.jpg" alt="Gambar 4">
+            <img src="-14.jpg" alt="Gambar 4">
+            <img src="-15.jpg" alt="Gambar 4">
+            <img src="-16.jpg" alt="Gambar 4">
+        </div>
+    </div>
+   
+
+<!-- ELEMEN 12-->
+    <div class="container" style="width: 500px; height: 200px; background-color: ;">
+    </div>
+<!-- ELEMEN 13-->
+    <div class="container" style="width: 500px; height: 200px; background-color: ;">
+    </div>
+<!-- ELEMEN 14-->
+    <div class="container" style="width: 500px; height: 200px; background-color: ;">
     </div>
 
 
