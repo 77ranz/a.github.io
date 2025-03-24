@@ -14,9 +14,14 @@
     
 <!-- HALAMAN html''linear-gradient(135deg, #667eea, #764ba2)-height: 5000vh;= TINGGI HALAMN -->
    <style>
-
+       * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
          html, body {
             overflow-x: hidden;
+            height: %;
             width: 100%;
             margin: 0;
             padding: 0;
@@ -30,7 +35,6 @@
             background-color: clear;
             color: black;
         }
-
 
         body {
             font-family: Arial, sans-serif;
@@ -103,7 +107,7 @@
          background-blend-mode: multiply;
          }
         .container:nth-child(2) { 
-         background:  url('8.jpg') no-repeat center/cover; 
+         background:  url('') no-repeat center/cover; 
          background-blend-mode: multiply;
          }
         .container:nth-child(3) { 
@@ -142,12 +146,6 @@
 
 <!-- TEXT ROTASI -->
     <style> 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-       
         .container3 {
             display: flex;
             justify-content: center;
@@ -193,48 +191,41 @@
     </style>
 
 
-<!-- IMG ROTASI -->
- <style> 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-       
-        .container {
+ <!-- IMG ROTASI-->
+    <style> 
+        .container4 {
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
-            height: 200px;
-            width: 100%;
-            perspective: 1000px; /* Tambahkan efek 3D */
+            height: 700px;
+            width: 500px;
+            perspective: 1000px;
         }
+
         .image-wrapper {
             position: relative;
-            width: auto;
+            width: 100%;
+            height: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
             animation: rotateAnimation 30s linear infinite;
             transform-style: preserve-3d;
         }
+
         .image, .image-mirror {
             position: absolute;
-            background: url('22.jpg') no-repeat center/cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 50px; 
-            font-weight: bold;
-            color: white;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-            padding: 20px;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
             backface-visibility: hidden;
         }
+
         .image-mirror {
             transform: rotateY(180deg);
         }
+
         @keyframes rotateAnimation {
             0% {
                 transform: rotateY(0deg);
@@ -430,25 +421,20 @@
  <div class="flex flex-col gap-6 w-full max-w-4xl px-4 rounded-2xl p-6 h-40 container2" style="background-color: clear;" style="width: 500px; height: 200px; background-color: ;">
     </div>
 
-  <!-- ELEMEN 2 HEADER--> 
-<div class="container" style="width: 500px; height: 100px; background-color: ;">
-    <header class="bg-white dark:bg-gray-800 shadow-md fixed top-0 left-0 w-full z-50">
-        <div class="mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center space-x-4">
+  <!-- ELEMEN 2 HEADER --> 
+<div class="container mx-auto px-6 py-4 flex justify-between items-center flex items-center space-x-4" style="width: 500px; height: 200px; background-color:black ;" header class="bg-white dark:bg-gray-800 shadow-md fixed top-0 left-0 w-full z-50">
                 <a href="#">
-                    <img src="a.png" alt="Logo" class="h-10"> 
+                    <img src="d.jpg" alt="Logo" class="h-10"> 
                 </a>
                 <span class="text-gray-700 dark:text-gray-300">Slogan atau Deskripsi</span>
-            </div>
             <nav class="flex space-x-6">
                 <a href="#" class="text-gray-900 dark:text-white hover:text-blue-500">Home</a>
                 <a href="#" class="text-gray-900 dark:text-white hover:text-blue-500">About</a>
                 <a href="#" class="text-gray-900 dark:text-white hover:text-blue-500">Services</a>
                 <a href="#" class="text-gray-900 dark:text-white hover:text-blue-500">Contact</a>
             </nav>
-        </div>
-    </header>
 </div>
+
 
 <!-- ELEMEN 3 Gambar Vertikal -->
     <div class="container image-box" style="width: 500px; height: 700px; background-color: ;">
@@ -466,12 +452,13 @@
 
 
 <!-- ELEMEN 4 IMG ROTASI-->
-     <div class="container" style="width: 500px; height: 700px; background-color: ;">
-      <div class="image-wrapper">
-            <div class="image"></div>
-            <div class="image-mirror"></div>
+    <div class="container4">
+        <div class="image-wrapper">
+            <img src="22.jpg" class="image" alt="Rotating Image">
+            <img src="22.jpg" class="image-mirror" alt="Rotating Image Mirror">
         </div>
-   </div>
+    </div>
+
 
     <div class="container image-box" style="width: 500px; height: 600px; background-color: ;">
         <img src="15.jpg" alt="Image 5">
@@ -494,14 +481,13 @@
     
 
 <!-- ELEMEN 5 TEXT ROTASI -->
- <div class="container" style="width: 500px; height: 500px; background-color: ;">
-    <div class="container3">
+ <div class="container container3" style="width: 500px; height: 500px; background-color: ;">
         <div class="text-wrapper">
             <div class="text">🎉 SELAMAT ULANG TAHUN QANITA 🎉</div>
             <div class="text-mirror">🎉 SELAMAT ULANG TAHUN QANITA 🎉</div>
         </div>
     </div>
-</div>
+
 
 <!-- ELEMEN 6-->
     <div class="container" style="width: 500px; height: 200px; background-color: ;">
