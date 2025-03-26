@@ -55,9 +55,10 @@
             color: var(--text-color);
             transition: background 0.3s, color 0.3s;
             overflow-x: hidden; /* Mencegah scroll horizontal */
+         justify-content: space-between;
+         padding: 20px 0;
            } 
-
-          
+ 
         .container {
             width: 100%;
             max-width: 100%; /* Membatasi lebar gambar */
@@ -78,7 +79,6 @@
             transform: scale(1.05);
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
         }
-
 
         h1 {
             color: white;
@@ -193,42 +193,93 @@
     </style>
 
 <!-- Gambar Run Bolak Balik -->
-    <style>
-
-        .box {
-            font-size: 10px;
-            font-weight: bold;
-            margin: 5px 0;
-            text-align: center;
-        }
-        .marquee-container {
-            width: 80%;
-            overflow: hidden;
+   <style>
+      
+        .container-wrapper {
             position: relative;
+            width: 90vw;
+            max-width: 100vw;
+            height: 200px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            overflow: hidden;
+        }
+        .box {
+            width: 120px;
+            height: 120px;
+            background-color: rgba(70, 130, 180, 0.8);
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 500px;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            position: absolute;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, opacity 0.3s ease;
         }
-        .marquee {
-            display: flex;
-            animation: marqueeAnimation 20s linear infinite alternate;
+        .box:hover {
+            transform: scale(1.1);
+            opacity: 0.9;
         }
-        .marquee img {
-            width: 700;
-            height: 500px;
-            margin: 0px;
+        .box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 0px;
         }
-        .marquee2 {
-            animation: marqueeAnimationReverse 10s linear infinite alternate;
+        .top .box:nth-child(1) {
+            animation: move1 20s ease-in-out infinite alternate;
         }
-        @keyframes marqueeAnimation {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
+        .top .box:nth-child(2) {
+            animation: move2 20s ease-in-out infinite alternate;
         }
-        @keyframes marqueeAnimationReverse {
-            0% { transform: translateX(-50%); }
-            100% { transform: translateX(0); }
+        .top .box:nth-child(3) {
+            animation: move3 20s ease-in-out infinite alternate;
+        }
+        .bottom .box:nth-child(1) {
+            animation: move4 10s ease-in-out infinite alternate;
+        }
+        .bottom .box:nth-child(2) {
+            animation: move5 10s ease-in-out infinite alternate;
+        }
+        .bottom .box:nth-child(3) {
+            animation: move6 10s ease-in-out infinite alternate;
+        }
+
+        @keyframes move1 {
+            0% { left: 0; }
+            100% { left: 60%; }
+        }
+        @keyframes move2 {
+            0% { left: 10%; }
+            100% { left: 70%; }
+        }
+        @keyframes move3 {
+            0% { left: 20%; }
+            100% { left: 80%; }
+        }
+        @keyframes move4 {
+            0% { right: 0; }
+            100% { right: 60%; }
+        }
+        @keyframes move5 {
+            0% { right: 10%; }
+            100% { right: 70%; }
+        }
+        @keyframes move6 {
+            0% { right: 20%; }
+            100% { right: 80%; }
+        }
+
+        @media (max-width: 768px) {
+            .box {
+                width: 80px;
+                height: 80px;
+            }
         }
     </style>
 
@@ -621,46 +672,34 @@
     </div>
 
 <!-- ELEMEN 10-Gambar Run Bolak Balik -->
-    <div class="container box marquee-container" style="width: 500px; height: 200px; background-color: ;">✔ DAFTAR PRODUCT TOKO KAMI ! 👌
-        <div class="marquee">
-            <img src="11.jpg" alt="Gambar 3">
-            <img src="12.jpg" alt="Gambar 4">
-            <img src="13.jpg" alt="Gambar 1">
-            <img src="14.jpg" alt="Gambar 1">
-            <img src="15.jpg" alt="Gambar 1">
-            <img src="16.jpg" alt="Gambar 1">
-            <img src="17.jpg" alt="Gambar 1">
-            <img src="18.jpg" alt="Gambar 1">
-            <img src="19.jpg" alt="Gambar 2">
-            <img src="20.jpg" alt="Gambar 2">
-            <img src="21.jpg" alt="Gambar 2">
-            <img src="22.jpg" alt="Gambar 2">
+    
+    <div class="container-wrapper top">
+        <div class="box">
+            <img src="-1.jpg" alt="Image 1">
+        </div>
+        <div class="box">
+            <img src="-2.jpg" alt="Image 2">
+        </div>
+        <div class="box">
+            <img src="-3.jpg" alt="Image 3">
         </div>
     </div>
-    
+
 
 <!-- ELEMEN 11-Gambar Run Bolak Balik -->
-    <div class="container box marquee-container" style="width: 500px; height: 200px; background-color: ;">✔ PHOTO ARTIST MASA DEPAN 🤫🤭😜
-        <div class="marquee marquee2">
-            <img src="-1.jpg" alt="Gambar 1">
-            <img src="-2.jpg" alt="Gambar 2">
-            <img src="-3.jpg" alt="Gambar 3">
-            <img src="-4.jpg" alt="Gambar 4">
-            <img src="-5.jpg" alt="Gambar 5">
-            <img src="-6.jpg" alt="Gambar 6">
-            <img src="-7.jpg" alt="Gambar 7">
-            <img src="-8.jpg" alt="Gambar 8">
-            <img src="-9.jpg" alt="Gambar 1">
-            <img src="-10.jpg" alt="Gambar 2">
-            <img src="-11.jpg" alt="Gambar 3">
-            <img src="-12.jpg" alt="Gambar 4">
-            <img src="-13.jpg" alt="Gambar 4">
-            <img src="-14.jpg" alt="Gambar 4">
-            <img src="-15.jpg" alt="Gambar 4">
-            <img src="-16.jpg" alt="Gambar 4">
+    
+    
+    <div class="container-wrapper bottom">
+        <div class="box">
+            <img src="-4.jpg" alt="Image 4">
+        </div>
+        <div class="box">
+            <img src="-5.jpg" alt="Image 5">
+        </div>
+        <div class="box">
+            <img src="-6.jpg" alt="Image 6">
         </div>
     </div>
-   
 
 <!-- ELEMEN 21-->
 <div class="container" style="width: 500px; height: 250px; background-color: ; padding: 20px; border-radius: 10px; text-align: center;">
@@ -698,7 +737,7 @@
                     top: scrollAmount,
                     behavior: "smooth"
                 });
-            }, 7000);
+            }, 6000);
         }
 
         slider.addEventListener("mouseenter", () => clearInterval(slideTimer));
