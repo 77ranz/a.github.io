@@ -147,15 +147,47 @@
          background-blend-mode: multiply;
          }
         .container:nth-child(12) { 
-         background: clear url('=8.jpg') no-repeat center/cover; 
+         background: blue url('=8.jpg') no-repeat center/cover; 
          background-blend-mode: multiply;
          }
         .container:nth-child(13) { 
-         background: clear url('=8.jpg') no-repeat center/cover; 
+         background: red url('=8.jpg') no-repeat center/cover; 
          background-blend-mode: multiply;
          }
         .container:nth-child(14) { 
          background: clear url('=8.jpg') no-repeat center/cover; 
+         background-blend-mode: multiply;
+         }
+.container:nth-child(15) { 
+         background: clear url('=8.jpg') no-repeat center/cover; 
+         background-blend-mode: multiply;
+         }
+.container:nth-child(16) { 
+         background: clear url('=8.jpg') no-repeat center/cover; 
+         background-blend-mode: multiply;
+         }
+.container:nth-child(17) { 
+         background: clear url('=8.jpg') no-repeat center/cover; 
+         background-blend-mode: multiply;
+         }
+.container:nth-child(18) { 
+         background: clear url('=8.jpg') no-repeat center/cover; 
+         background-blend-mode: multiply;
+         }
+.container:nth-child(19) { 
+         background: clear url('=8.jpg') no-repeat center/cover; 
+         background-blend-mode: multiply;
+         }
+.container:nth-child(20) { 
+         background: clear url('=8.jpg') no-repeat center/cover; 
+         background-blend-mode: multiply;
+         }
+.container:nth-child(21) { 
+         background: blue url('=8.jpg') no-repeat center/cover; 
+         background-blend-mode: multiply;
+         }
+.container:nth-child(22) { 
+         background: red url('=8.jpg') no-repeat center/cover; 
          background-blend-mode: multiply;
          }
     </style>
@@ -404,33 +436,42 @@
     </style>
 
 <!-- Testimoni Pelanggan -->
- <style>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: #f8f8f8;
+            margin: 0;
+        }
+
         #testimoni {
-            width: 100%;
-            max-width: 100%;
+            width: 90%;
+            max-width: 500px;
             background: linear-gradient(45deg, #ff416c, #ff4b2b);
             padding: 20px;
             text-align: center;
             color: black;
+            border-radius: 15px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
             overflow: hidden;
         }
 
-        /* Header */
         #testimoni h2 {
             font-size: 20px;
-            margin-bottom: 2px;
+            margin-bottom: 15px;
             text-transform: uppercase;
         }
 
-        /* Wrapper untuk Slider */
         .testimoni-wrapper {
             display: flex;
-            gap: 20px;
-            overflow-x: auto;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            overflow-y: auto;
+            max-height: 300px;
             scroll-behavior: smooth;
-            white-space: nowrap;
-            padding: 10px;
-            transition: transform 5.5s ease-in-out;
             scrollbar-width: none;
         }
 
@@ -438,14 +479,14 @@
             display: none;
         }
 
-        /* Styling Testimoni */
         .testimoni-item {
-            min-width: 300px;
+            width: 90%;
+            max-width: 400px;
             background: rgba(255, 255, 255, 0.2);
             padding: 15px;
             border-radius: 15px;
             text-align: center;
-            box-shadow: 0px 14px 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s;
         }
 
@@ -453,20 +494,11 @@
             transform: scale(1.05);
         }
 
-        /* Nama Pelanggan */
         .testimoni-item span {
             display: block;
             margin-top: 5px;
             font-weight: bold;
-            font-size: 10px;
-            opacity: 1.8;
-        }
-
-        /* Responsif untuk Mobile */
-        @media (max-width: 600px) {
-            .testimoni-item {
-                min-width: 250px;
-            }
+            font-size: 12px;
         }
     </style>
 
@@ -538,7 +570,7 @@
     
 
 <!-- ELEMEN 5 TEXT ROTASI -->
- <div class="container container3" style="width: 500px; height: 600px; background-color: ;">
+ <div class="container container3" style="width: 500px; height: 700px; background-color: ;">
         <div class="text-wrapper">
             <div class="text">🎉 SELAMAT ULANG TAHUN QANITA 🎉</div>
             <div class="text-mirror">🎉 SELAMAT ULANG TAHUN QANITA 🎉</div>
@@ -562,7 +594,7 @@
     </div>
         
 <!-- ELEMEN 9 Testimoni Pelanggan -->
-         <div id="testimoni" class="container" style="width: 500px; height: 150px; background-color: ;">
+<div id="testimoni" div class="container" style="width: 500px; height: 700px; background-color: ;">
         <h2>Apa Kata Pelanggan Kami?</h2>
         <div class="testimoni-wrapper" id="testimoniSlider">
             <div class="testimoni-item">
@@ -571,19 +603,19 @@
             </div>
             <div class="testimoni-item">
                 <p>"Harga sangat bersaing & Banyak Discount-nya!"</p>
-                <span>- Cynthia Bella</span>
+                <span>- Luna Maya</span>
             </div>
             <div class="testimoni-item">
-                <p>"Beli Mukena dpt bonus Sendal jepit!"</p>
+                <p>"Beli Mukena dpt Bonus Sendal jepit!"</p>
                 <span>- Thowelas</span>
             </div>
             <div class="testimoni-item">
-                <p>"Respone & Pengiriman cepat!"</p>
+                <p>"Response & Pengiriman cepat!"</p>
                 <span>- Gibran Rakabumi</span>
             </div>
             <div class="testimoni-item">
-                <p>"Pelayan ramah dan kemayu. Fast respone 24 jam!"</p>
-                <span>- Mayor Teddy</span>
+                <p>"Pelayan ramah dan kemayu.Fast response 24 jam!"</p>
+                <span>- Presiden Prabowo</span>
             </div>
         </div>
     </div>
@@ -630,19 +662,26 @@
     </div>
    
 
-<!-- ELEMEN 12-->
-    <div class="container" style="width: 500px; height: 200px; background-color: ;">
-    </div>
-<!-- ELEMEN 13-->
-    <div class="container" style="width: 500px; height: 200px; background-color: ;">
-    </div>
-<!-- ELEMEN 14-->
+<!-- ELEMEN 21-->
+<div class="container" style="width: 500px; height: 250px; background-color: ; padding: 20px; border-radius: 10px; text-align: center;">
+    <h1 style="font-size: 14px; font-weight: bold; margin-bottom: 10px;">Elemen 21</h1>
+    <p style="font-size: 10px; color: #333; margin-bottom: 15px;">Fast Response</p>
+    <a href="#" class="btn" style="display: inline-block; padding: 10px 20px; background-color: green; color: white; text-decoration: none; font-size: 20px; border-radius: 50px;">Daftar Janda2 Muda Terbaru 2025</a>
+</div>
+
+<!-- ELEMEN 22-->
+    <div class="container" style="width: 500px; height: 250px; background-color: ; padding: 20px; border-radius: 10px; text-align: center;">
+    <h1 style="font-size: 14px; font-weight: bold; margin-bottom: 10px;">Elemen 22</h1>
+    <p style="font-size: 10px; color: #333; margin-bottom: 15px;">Fast Response</p>
+    <a href="#" class="btn" style="display: inline-block; padding: 10px 20px; background-color: green; color: white; text-decoration: none; font-size: 20px; border-radius: 100px;">WhatsApp Admin</a>
+</div>
+
+<!-- ELEMEN 14 -->
     <div class="container" style="width: 500px; height: 200px; background-color: ;">
     </div>
 
 
 <!-- Testimoni Pelanggan -->
-
     <script>
         const slider = document.getElementById("testimoniSlider");
         let scrollAmount = 0;
@@ -650,16 +689,16 @@
 
         function autoSlide() {
             slideTimer = setInterval(() => {
-                if (scrollAmount >= slider.scrollWidth - slider.clientWidth) {
+                if (scrollAmount >= slider.scrollHeight - slider.clientHeight) {
                     scrollAmount = 0;
                 } else {
-                    scrollAmount += 320;
+                    scrollAmount += 100;
                 }
                 slider.scrollTo({
-                    left: scrollAmount,
+                    top: scrollAmount,
                     behavior: "smooth"
                 });
-            }, 3000);
+            }, 7000);
         }
 
         slider.addEventListener("mouseenter", () => clearInterval(slideTimer));
