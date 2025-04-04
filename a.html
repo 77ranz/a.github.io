@@ -1,13 +1,10 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pilih Metode Pembayaran</title>
-<!--METODE PEMBAYARAN-->
-   <style>
-
+    <style>
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
@@ -19,35 +16,36 @@
             margin: 50px auto;
             padding: 20px;
             background: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+            border: 1px solid #ddd;
         }
         h2 {
             text-align: center;
             margin-bottom: 20px;
             color: #333;
         }
-       
-
- .payment-option {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        padding: 15px;
-        border: 1px solid #ddd;
-        border-radius: 10px;
-        margin-bottom: 10px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-    }
-    
+        .payment-option {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 12px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            background: white;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
         .payment-option:hover {
             background-color: #f0f0f0;
+            box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
         }
         .payment-option input {
             margin-right: 10px;
-            accent-color: #28a745; /* Modern accent color for radio buttons */
+            accent-color: #28a745;
         }
         .btn-submit {
             width: 100%;
@@ -55,16 +53,15 @@
             background-color: #28a745;
             color: white;
             border: none;
-            border-radius: 5px;
+            border-radius: 8px;
             font-size: 18px;
             cursor: pointer;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, box-shadow 0.3s;
         }
         .btn-submit:hover {
             background-color: #218838;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
         }
-
-        /* Responsive Styles */
         @media (max-width: 600px) {
             .container {
                 padding: 15px;
@@ -73,48 +70,40 @@
                 font-size: 16px;
             }
         }
-   
-</style>
-
+    </style>
 </head>
 <body>
-<!--METODE PEMBAYARAN-->
 <div class="container">
     <h2>Pilih Metode Pembayaran</h2>
     <form id="paymentForm">
-        
+        <div class="payment-option">
+            <input type="radio" id="DANA" name="payment" value="DANA_e-wallet" required>
+            <label for="DANA">DANA e-wallet</label>
         </div>
         <div class="payment-option">
-            <input type="radio" id="DANA e-wallet" name="payment" value="DANA_e-wallet" required>
-            <label for="DANA e-wallet">DANA e-wallet</label>
+            <input type="radio" id="SeaBank" name="payment" value="Sea_Bank">
+            <label for="SeaBank">Sea Bank</label>
         </div>
         <div class="payment-option">
-            <input type="radio" id="Sea Bank" name="payment" value="Sea_Bank">
-            <label for="Sea Bank">Sea Bank</label>
-        </div>
-        <div class="payment-option">
-            <input type="radio" id="bankTransfer" name="payment" value="Bank_BCA">
-            <label for="bankTransfer">BCA</label>
+            <input type="radio" id="BCA" name="payment" value="Bank_BCA">
+            <label for="BCA">BCA</label>
         </div>
         <button type="submit" class="btn-submit">Lanjutkan ke Pembayaran</button>
     </form>
 </div>
-
 <script>
     document.getElementById('paymentForm').addEventListener('submit', function(event) {
         event.preventDefault();
         const selectedPayment = document.querySelector('input[name="payment"]:checked').value;
-        alert('PERHATIAN !\n' + 
-      'Transfer hanya melalui rekening berikut,selain itu kami tidak bertanggung jawab.\n'+
-      'Karena kami tidak membuka cabang di manapun.\n' +
-      'DANA 08956474XXX (penjual)\n' + 
-      'SeaBANK 90454564XXX (penjual)\n' + 
-      'BCA 408956474XXX (penjual)\n' + 
-      'Dan kirimkan bukti transfer ke WA 0865435678xxx ,untuk proses pengiriman pesanan.');
-
-        // Tentukan URL tujuan berdasarkan metode pembayaran
+        alert('PERHATIAN!\n' +
+            'Transfer hanya melalui rekening berikut, selain itu kami tidak bertanggung jawab.\n' +
+            'Karena kami tidak membuka cabang di manapun.\n' +
+            'DANA 08956474XXX (penjual)\n' +
+            'SeaBANK 90454564XXX (penjual)\n' +
+            'BCA 408956474XXX (penjual)\n' +
+            'Dan kirimkan bukti transfer ke WA 0865435678XXX untuk proses pengiriman pesanan.');
+        
         let paymentUrl = '';
-
         if (selectedPayment === 'Sea_Bank') {
             paymentUrl = 'https://play.google.com/store/apps/details?id=id.co.bankbkemobile.digitalbank';
         } else if (selectedPayment === 'DANA_e-wallet') {
@@ -122,17 +111,11 @@
         } else if (selectedPayment === 'Bank_BCA') {
             paymentUrl = 'https://play.google.com/store/apps/details?id=com.bca';
         }
-
-        // Alihkan ke halaman pembayaran jika URL tersedia
+        
         if (paymentUrl) {
             window.location.href = paymentUrl;
         }
     });
 </script>
-
-
-
-<!---->
-
 </body>
 </html>
