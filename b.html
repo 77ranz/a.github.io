@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asisten AI Toko</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .chat-container {
+            max-width: 600px;
+            width: 100%;
+            background: pink;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            overflow: hidden;
+            border: 3px solid #28a745;
+        }
+        .chat-box {
+            height: 400px;
+            overflow-y: auto;
+            padding: 20px;
+            border-bottom: 2px solid #eaeaea;
+            box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.05);
+        }
+        .chat-message {
+            margin-bottom: 15px;
+            padding: 10px;
+            border-radius: 8px;
+            max-width: 80%;
+            box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+        }
+        .chat-message.bot {
+            text-align: left;
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            align-self: flex-start;
+            margin-right: auto;
+        }
+        .chat-input {
+            display: flex;
+            padding: 10px;
+            background: #fff;
+            border-top: 2px solid #eaeaea;
+        }
+        .chat-input input {
+            flex: 1;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            outline: none;
+            transition: 0.3s;
+        }
+        .chat-input input:focus {
+            border-color: #28a745;
+            box-shadow: 0 0 8px rgba(40, 167, 69, 0.5);
+        }
+        .chat-input button {
+            padding: 12px 15px;
+            border: none;
+            background-color: #28a745;
+            color: white;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .choices {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 10px;
+            flex-direction: column;
+            align-items: center;
+        }
+        .choice-button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            padding: 10px 15px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        .choice-button:hover {
+            background-color: #218838;
+        }
+        .welcome-message {
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #28a745;
+        }
+    </style>
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-box" id="chat-box">
+            <!-- Pesan akan muncul di sini -->
+        </div>
+        <div class="chat-input">
+            <input type="text" id="user-input" placeholder="Tanyakan sesuatu..." />
+            <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+  <script>
+        let chatHistory = [];
+
+        function sendMessage() {
+            const input = document.getElementById('user-input');
+            const message = input.value.trim();
+            if (message === '') return;
+
+            addMessage('user', message);
+            chatHistory.push({ role: 'user', text: message });
+            input.value = '';
+
+            setTimeout(() => {
+                let botResponse = '';
+                if (chatHistory.length === 1) {
+                    botResponse = "Selamat Datang di QANITA ONLINE SHOP ! Ada yang bisa saya bantu ? Perkenalkan saya QANITA 😊🙏 Asisten baru, dari Admin Bunda SUGINI.";
+                    addMessage('bot', botResponse);
+                    addChoiceButtons();
+                } else {
+                    botResponse = generateBotResponse(message);
+                    addMessage('bot', botResponse);
+                }
+                chatHistory.push({ role: 'bot', text: botResponse });
+            }, 1000);
+        }
+
+        function handleKeyPress(event) {
+            if (event.key === "Enter") {
+                sendMessage();
+            }
+        }
+
+        function generateBotResponse(message) {
+            const knownQuestions = ['harga', 'produk', 'lokasi'];
+            const lowerCaseMessage = message.toLowerCase();
+
+            for (let question of knownQuestions) {
+                if (lowerCaseMessage.includes(question)) {
+                    return "Berikut jawaban saya untuk pertanyaan Anda: " + message;
+                }
+            }
+            return "Maaf, saya tidak mengerti pertanyaan KK, Mungkin KK bisa menjelaskan lebih lanjut ? Atau silahkan KK pilih opsi yang tersedia..🙏";
+        }
+
+        function addMessage(type, text) {
+            const chatBox = document.getElementById('chat-box');
+            const messageDiv = document.createElement('div');
+            messageDiv.classList.add('chat-message', type);
+            messageDiv.textContent = text;
+            chatBox.appendChild(messageDiv);
+            chatBox.scrollTop = chatBox.scrollHeight;
+        }
+
+        function addChoiceButtons() {
+        const chatBox = document.getElementById('chat-box');
+        const choicesDiv = document.createElement('div');
+        choicesDiv.classList.add('choices');
+
+        const optionTexts = [
+            "LIHAT TOKO",
+            "DAFTAR PRODUK",
+            "PERLENGKAPAN SAWAH",
+            "DAFTAR BAJU DEWASA",
+            "DAFTAR BAJU ANAK",
+            "PERLENGKAPAN RUMAH TANGGA",
+            "PERLENGKAPAN RENANG",
+            "VIDEO PRODUK",
+            "PROMO / DISCOUNT",
+            "PEMBAYARAN",
+            "OTOMOTIF",
+            "ELEKTRONIK",
+            "CHAT ADMIN",
+            "LOKASI"
+            ];
+
+            const botResponses = [
+            "https://77ranz.github.io/a.github.io/",
+            "https://77ranz.github.io/b/",
+            "https://77ranz.github.io/example-/",
+            "https://77ranz.github.io/a.github.io/",
+            "https://77ranz.github.io/example-/",
+            "https://77ranz.github.io/a.github.io/",
+            "https://77ranz.github.io/example-/",
+            "https://77ranz.github.io/b/",
+            "https://77ranz.github.io/example-/",
+            "a.html", // Link a.html langsung dibuka
+            "https://77ranz.github.io/b/",
+            "https://77ranz.github.io/example-/",
+            "https://wa.me/qr/O2UCUBL6L5DUA1",
+            "https://www.google.com/maps/place/6%C2%B024'48.3%22S+106%C2%B058'27.4%22E/@-6.4134053,106.9717052,17z/data=!3m1!4b1!4m4!3m3!8m2!3d-6.4134053!4d106.9742801?entry=ttu&g_ep=EgoyMDI1MDQwMi4xIKXMDSoASAFQAw%3D%3D",
+        ];
+
+
+            optionTexts.forEach((text, index) => {
+            const button = document.createElement('button');
+            button.classList.add('choice-button');
+            button.textContent = text;
+
+
+                button.onclick = function () {
+                addMessage('user', text);
+                chatHistory.push({ role: 'user', text: text });
+
+                     setTimeout(() => {
+                    if (text === "PEMBAYARAN") {
+                        window.location.href = "a.html"; // Membuka a.html saat tombol pembayaran diklik
+                    } else {
+                        let botChoiceResponse = `Anda memilih: "${text}". ${botResponses[index]}`;
+                        chatHistory.push({ role: 'bot', text: botChoiceResponse });
+                        addMessage('bot', botChoiceResponse);
+
+                        if (botResponses[index].startsWith("http")) {
+                            window.open(botResponses[index], "_blank");
+                        }
+                    }
+                }, 1000);
+            };
+
+            choicesDiv.appendChild(button);
+        });
+
+        chatBox.appendChild(choicesDiv);
+    }
+</script>
+</body>
+</html>
+
+
+    
+        
+
+       
+        
+           
+               
