@@ -172,6 +172,7 @@
 
         const optionTexts = [
             "Version in English",
+            "Kasir Modern",
             "Asisten Toko AI",
             "Animasi Website",
             "Video Editing",
@@ -181,7 +182,6 @@
             "Perlengkapan / Peralatan",
             "PROMO / DISCOUNT",
             "OTOMOTIF",
-            "ELEKTRONIK",
             "Lokasi",
             "Info Pembayaran",
             "WhatsApp ADMIN"
@@ -198,8 +198,8 @@
             "https://77ranz.github.io/b/",
             "https://wa.me/62895360208457?text=Halo%20Kak%20saya%20tertarik%20dengan%20produk%20anda",
             "https://77ranz.github.io/b/",
-            "https://www.google.com/maps/place/6%C2%B024'48.3%22S+106%C2%B058'27.4%22E/@-6.4134053,106.9717052,17z/data=!3m1!4b1!4m4!3m3!8m2!3d-6.4134053!4d106.9742801?entry=ttu&g_ep=EgoyMDI1MDQwMi4xIKXMDSoASAFQAw%3D%3D",
             "https://77ranz.github.io/example-/",
+            "https://www.google.com/maps/place/6%C2%B024'48.3%22S+106%C2%B058'27.4%22E/@-6.4134053,106.9717052,17z/data=!3m1!4b1!4m4!3m3!8m2!3d-6.4134053!4d106.9742801?entry=ttu&g_ep=EgoyMDI1MDQwMi4xIKXMDSoASAFQAw%3D%3D",
             "a.html",
             "https://wa.me/62895360208457",
         ];
@@ -215,19 +215,48 @@
                 addMessage('user', text);
                 chatHistory.push({ role: 'user', text: text });
 
-                     setTimeout(() => {
-                    if (text === "Info Pembayaran") {
-                        window.location.href = "a.html"; // Membuka a.html saat tombol pembayaran diklik
-                    } else {
-                        let botChoiceResponse = `Anda memilih: "${text}". ${botResponses[index]}`;
-                        chatHistory.push({ role: 'bot', text: botChoiceResponse });
-                        addMessage('bot', botChoiceResponse);
+                    setTimeout(() => {
+    if (text === "Info Pembayaran") {
+        window.location.href = "a.html"; // Membuka a.html saat tombol pembayaran diklik
+    } else {
+        let botChoiceResponse = `Anda memilih: "${text}". ${botResponses[index]}`;
+        chatHistory.push({ role: 'bot', text: botChoiceResponse });
+        addMessage('bot', botChoiceResponse);
 
-                        if (botResponses[index].startsWith("http")) {
-                            window.open(botResponses[index], "_blank");
-                        }
-                    }
-                }, 1000);
+        if (botResponses[index].startsWith("http")) {
+            window.open(botResponses[index], "_blank");
+        }
+    }
+}, 500);
+
+setTimeout(() => {
+    if (text === "Info Produk") {
+        window.location.href = "b.html"; // Membuka b.html saat tombol produk diklik
+    } else {
+        let botChoiceResponse = `Anda memilih: "${text}". ${botResponses[index]}`;
+        chatHistory.push({ role: 'bot', text: botChoiceResponse });
+        addMessage('bot', botChoiceResponse);
+
+        if (botResponses[index].startsWith("http")) {
+            window.open(botResponses[index], "_blank");
+        }
+    }
+}, 1000);
+
+setTimeout(() => {
+    if (text === "Version in English") {
+        window.location.href = "c.html"; // Membuka c.html saat tombol kontak diklik
+    } else {
+        let botChoiceResponse = `Anda memilih: "${text}". ${botResponses[index]}`;
+        chatHistory.push({ role: 'bot', text: botChoiceResponse });
+        addMessage('bot', botChoiceResponse);
+
+        if (botResponses[index].startsWith("http")) {
+            window.open(botResponses[index], "_blank");
+        }
+    }
+}, 1500);
+
             };
 
             choicesDiv.appendChild(button);
