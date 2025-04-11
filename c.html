@@ -172,6 +172,7 @@
 
         const optionTexts = [
             "Version in Indonesian",
+            "Kasir Modern",
             "Asisten Toko AI",
             "Animasi Website",
             "Video Editing",
@@ -181,7 +182,6 @@
             "Perlengkapan / Peralatan",
             "PROMO / DISCOUNT",
             "OTOMOTIF",
-            "ELEKTRONIK",
             "Lokasi",
             "Info Pembayaran",
             "WhatsApp ADMIN"
@@ -215,19 +215,48 @@
                 addMessage('user', text);
                 chatHistory.push({ role: 'user', text: text });
 
-                     setTimeout(() => {
-                    if (text === "PEMBAYARAN") {
-                        window.location.href = "a.html"; // Membuka a.html saat tombol pembayaran diklik
-                    } else {
-                        let botChoiceResponse = `Anda memilih: "${text}". ${botResponses[index]}`;
-                        chatHistory.push({ role: 'bot', text: botChoiceResponse });
-                        addMessage('bot', botChoiceResponse);
+                    setTimeout(() => {
+    if (text === "Info Pembayaran") {
+        window.location.href = "a.html"; // Membuka a.html saat tombol pembayaran diklik
+    } else {
+        let botChoiceResponse = `Anda memilih: "${text}". ${botResponses[index]}`;
+        chatHistory.push({ role: 'bot', text: botChoiceResponse });
+        addMessage('bot', botChoiceResponse);
 
-                        if (botResponses[index].startsWith("http")) {
-                            window.open(botResponses[index], "_blank");
-                        }
-                    }
-                }, 1000);
+        if (botResponses[index].startsWith("http")) {
+            window.open(botResponses[index], "_blank");
+        }
+    }
+}, 500);
+
+setTimeout(() => {
+    if (text === "Version in Indonesian") {
+        window.location.href = "b.html"; // Membuka b.html saat tombol produk diklik
+    } else {
+        let botChoiceResponse = `Anda memilih: "${text}". ${botResponses[index]}`;
+        chatHistory.push({ role: 'bot', text: botChoiceResponse });
+        addMessage('bot', botChoiceResponse);
+
+        if (botResponses[index].startsWith("http")) {
+            window.open(botResponses[index], "_blank");
+        }
+    }
+}, 1000);
+
+setTimeout(() => {
+    if (text === "Vers") {
+        window.location.href = "xb.html"; // Membuka c.html saat tombol kontak diklik
+    } else {
+        let botChoiceResponse = `Anda memilih: "${text}". ${botResponses[index]}`;
+        chatHistory.push({ role: 'bot', text: botChoiceResponse });
+        addMessage('bot', botChoiceResponse);
+
+        if (botResponses[index].startsWith("http")) {
+            window.open(botResponses[index], "_blank");
+        }
+    }
+}, 1500);
+
             };
 
             choicesDiv.appendChild(button);
