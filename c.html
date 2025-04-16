@@ -107,7 +107,7 @@
             <!-- Pesan akan muncul di sini -->
         </div>
         <div class="chat-input">
-            <input type="text" id="user-input" placeholder="Tanyakan sesuatu..." />
+            <input type="text" id="user-input" placeholder="Ask something..." />
             <button onclick="sendMessage()"><i class="fas fa-paper-plane"></i></button>
         </div>
     </div>
@@ -172,19 +172,13 @@
 
         const optionTexts = [
             "Version in Indonesian",
-            "Kasir Modern",
-            "Asisten Toko AI",
-            "Animasi Website",
-            "Video Editing",
-            "Photo Editing",
-            "Produk Digital",
-            "Perlengkapan Motor",
-            "Perlengkapan / Peralatan",
-            "PROMO / DISCOUNT",
-            "OTOMOTIF",
-            "Lokasi",
-            "Info Pembayaran",
-            "WhatsApp ADMIN"
+            "Website Example",
+            "Store On Website",
+            "Store On Shopee",
+            "Store On Lazada",
+            "Store On TokoPedia",
+            "Store Location",
+            "Owner Phone/WhatsApp",
             ];
 
             const botResponses = [
@@ -193,14 +187,7 @@
             "https://77ranz.github.io/example-/",
             "https://wa.me/62895360208457?text=Halo%20Kak%20saya%20tertarik%20dengan%20Produk%20Kakak😊",
             "a.html",
-            "https://77ranz.github.io/a.github.io/",
-            "https://77ranz.github.io/example-/",
-            "https://77ranz.github.io/b/",
-            "https://wa.me/62895360208457?text=Halo%20Kak%20saya%20tertarik%20dengan%20produk%20anda",
-            "a.html", // Link a.html langsung dibuka
-            "https://77ranz.github.io/b/",
             "https://www.google.com/maps/place/6%C2%B024'48.3%22S+106%C2%B058'27.4%22E/@-6.4134053,106.9717052,17z/data=!3m1!4b1!4m4!3m3!8m2!3d-6.4134053!4d106.9742801?entry=ttu&g_ep=EgoyMDI1MDQwMi4xIKXMDSoASAFQAw%3D%3D",
-            "https://77ranz.github.io/example-/",
             "https://wa.me/62895360208457",
         ];
 
@@ -215,23 +202,9 @@
                 addMessage('user', text);
                 chatHistory.push({ role: 'user', text: text });
 
-                    setTimeout(() => {
-    if (text === "Info Pembayaran") {
-        window.location.href = "a.html"; // Membuka a.html saat tombol pembayaran diklik
-    } else {
-        let botChoiceResponse = `Anda memilih: "${text}". ${botResponses[index]}`;
-        chatHistory.push({ role: 'bot', text: botChoiceResponse });
-        addMessage('bot', botChoiceResponse);
-
-        if (botResponses[index].startsWith("http")) {
-            window.open(botResponses[index], "_blank");
-        }
-    }
-}, 500);
-
 setTimeout(() => {
     if (text === "Version in Indonesian") {
-        window.location.href = "b.html"; // Membuka b.html saat tombol produk diklik
+        window.location.href = "b.html"; // Membuka a.html saat tombol pembayaran diklik
     } else {
         let botChoiceResponse = `Anda memilih: "${text}". ${botResponses[index]}`;
         chatHistory.push({ role: 'bot', text: botChoiceResponse });
@@ -241,10 +214,38 @@ setTimeout(() => {
             window.open(botResponses[index], "_blank");
         }
     }
-}, 1000);
+}, 1);
 
 setTimeout(() => {
-    if (text === "Vers") {
+    if (text === "Website Example") {
+        window.location.href = "index.html"; // Membuka b.html saat tombol produk diklik
+    } else {
+        let botChoiceResponse = `Anda memilih: "${text}". ${botResponses[index]}`;
+        chatHistory.push({ role: 'bot', text: botChoiceResponse });
+        addMessage('bot', botChoiceResponse);
+
+        if (botResponses[index].startsWith("http")) {
+            window.open(botResponses[index], "_blank");
+        }
+    }
+}, 1);
+
+setTimeout(() => {
+    if (text === "Store On Website") {
+        window.location.href = "-b.html"; // Membuka b.html saat tombol produk diklik
+    } else {
+        let botChoiceResponse = `Anda memilih: "${text}". ${botResponses[index]}`;
+        chatHistory.push({ role: 'bot', text: botChoiceResponse });
+        addMessage('bot', botChoiceResponse);
+
+        if (botResponses[index].startsWith("http")) {
+            window.open(botResponses[index], "_blank");
+        }
+    }
+}, 1);
+
+setTimeout(() => {
+    if (text === "Store On Shopee") {
         window.location.href = "xb.html"; // Membuka c.html saat tombol kontak diklik
     } else {
         let botChoiceResponse = `Anda memilih: "${text}". ${botResponses[index]}`;
@@ -255,7 +256,63 @@ setTimeout(() => {
             window.open(botResponses[index], "_blank");
         }
     }
-}, 1500);
+}, 1);
+
+setTimeout(() => {
+    if (text === "Store On Lazada") {
+        window.location.href = "xb.html"; // Membuka c.html saat tombol kontak diklik
+    } else {
+        let botChoiceResponse = `Anda memilih: "${text}". ${botResponses[index]}`;
+        chatHistory.push({ role: 'bot', text: botChoiceResponse });
+        addMessage('bot', botChoiceResponse);
+
+        if (botResponses[index].startsWith("http")) {
+            window.open(botResponses[index], "_blank");
+        }
+    }
+}, 1);
+
+setTimeout(() => {
+    if (text === "Store On TokoPedia") {
+        window.location.href = "xb.html"; // Membuka c.html saat tombol kontak diklik
+    } else {
+        let botChoiceResponse = `Anda memilih: "${text}". ${botResponses[index]}`;
+        chatHistory.push({ role: 'bot', text: botChoiceResponse });
+        addMessage('bot', botChoiceResponse);
+
+        if (botResponses[index].startsWith("http")) {
+            window.open(botResponses[index], "_blank");
+        }
+    }
+}, 1);
+
+setTimeout(() => {
+    if (text === "Store Location") {
+        window.location.href = "xb.html"; // Membuka c.html saat tombol kontak diklik
+    } else {
+        let botChoiceResponse = `Anda memilih: "${text}". ${botResponses[index]}`;
+        chatHistory.push({ role: 'bot', text: botChoiceResponse });
+        addMessage('bot', botChoiceResponse);
+
+        if (botResponses[index].startsWith("http")) {
+            window.open(botResponses[index], "_blank");
+        }
+    }
+}, 1);
+
+setTimeout(() => {
+    if (text === "Owner Phone/WhatsApp") {
+        window.location.href = "xb.html"; // Membuka c.html saat tombol kontak diklik
+    } else {
+        let botChoiceResponse = `Anda memilih: "${text}". ${botResponses[index]}`;
+        chatHistory.push({ role: 'bot', text: botChoiceResponse });
+        addMessage('bot', botChoiceResponse);
+
+        if (botResponses[index].startsWith("http")) {
+            window.open(botResponses[index], "_blank");
+        }
+    }
+}, 1);
 
             };
 
